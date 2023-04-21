@@ -6,7 +6,8 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function lowMoonsPlanets(data) {
-  // Your code goes here...
+  return data.planets.filter(planet => !planet.hasOwnProperty('moons') || planet.moonsCount < 10)
+  .map(planed => planed.name);
 }
 
 // === TEST YOURSELF ===
