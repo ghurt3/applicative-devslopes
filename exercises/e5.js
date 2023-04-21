@@ -10,6 +10,9 @@ export function getPlanetsWithMassValue(data, number) {
       return planet.name;
     }
   }).filter(names => names !== undefined);
+  // DOES NOT PASS:
+  // return data.planets.filter(planet => planet.massValue >= number)
+  // .map(planet => planet.name);
 }
 
 
